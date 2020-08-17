@@ -1,0 +1,80 @@
+
+Locating with respect to elements to attributes
+
+ 
+
+1)Locating Elements with known attribute
+
+//*[@id='txtUsername']
+
+2)Locating Elements with known Elements and Attributes
+
+//input[@id='txtUsername']
+
+3)Locating Elements with known visible text
+
+//a[text()='OrangeHRM, Inc']
+
+4)Locating Elements when part of visible text is known
+
+syntax:://elementName[contains(text(),'part of text')]
+
+5)Locating elements with multiple attributes
+
+//input[@class='button'] [@type='submit'] [@value='LOGIN'] [@name='Submit']
+
+6)Locating elements with starting visible text is known
+
+//elementName[starts-with(text(),'starting text')]
+
+7)Locating elements with Dynamic attribute values
+
+//a[contains(@href,'Orange')]
+//a[starts-with(@href,'Orange')]
+
+
+
+
+
+
+
+Locating elements relative to known element
+
+
+
+1)Locating a parent element
+
+//*[@id='divUsername']/parent::form
+
+2)Locating a child element
+
+//*[@id='divUsername']/child::input
+//*[@id='divUsername']/input
+
+3)Locating ancestors of a known element
+
+//input[@id='txtUsername']/ancestor::form
+//input[@id='txtUsername']/ancestor::*
+
+4)Locating following elements
+
+//input[@id='txtUsername']/following::input
+//input[@id='txtUsername']/following::input[2]
+//input[@id='txtUsername']/following::input[last()]
+
+5)Locating preceding element
+
+//span[text()='Password']/preceding::input
+//span[text()='Password']/preceding::input[2]
+
+6)Locating following sibling
+
+//*[@id='txtUsername']/following-sibling::span
+
+7)Locating preceding sibling
+
+//span[contains(text(),'Username')]/preceding-sibling::input
+
+
+
+
